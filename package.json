@@ -1,0 +1,19 @@
+{
+  "name": "supersheet",
+  "version": "1.0.0",
+  "description": "makes data entry easy",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christopher Stolfa and Roger Vera",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/datastore": "^2.0.0",
+    "@google-cloud/storage": "^2.3.0",
+    "@google-cloud/vision": "^0.23.0"
+  }
+}
