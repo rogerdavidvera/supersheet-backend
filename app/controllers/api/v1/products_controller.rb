@@ -12,7 +12,10 @@ class Api::V1::ProductsController < ApplicationController
   def create
     # byebug
     @product = Product.create(strong_params)
+<<<<<<< HEAD
     
+=======
+>>>>>>> 2135bc2ca89070ad1ca37c9d8d2c3dd0000bafbf
     if @product.save
       render json: @product, status: :accepted
     else
