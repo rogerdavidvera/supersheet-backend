@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2018_11_12_220800) do
     t.string "name"
     t.string "tags"
     t.string "url"
+    t.string "price"
     t.integer "product_sheet_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
