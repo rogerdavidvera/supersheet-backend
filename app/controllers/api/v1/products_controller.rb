@@ -10,7 +10,8 @@ class Api::V1::ProductsController < ApplicationController
   end
 
   def create
-    @product.create(strong_params)
+    # byebug
+    @product = Product.create(strong_params)
     if @product.save
       render json: @product, status: :accepted
     else
@@ -32,7 +33,8 @@ class Api::V1::ProductsController < ApplicationController
   private
 
   def strong_params
-    params.permit(:name, :tags, :url, :product_sheet_id)
+
+    params.require(:product).permit(:name, :tags, :url, :product_sheet_id)
   end
 
   def find_product
