@@ -1,8 +1,12 @@
 class Api::V1::ProductSheetsController < ApplicationController
-  before_action :find_product_sheet, only: [:update]
+  before_action :find_product_sheet, only: [:update, :show]
   def index
     @product_sheets = ProductSheet.all
     render json: @product_sheets
+  end
+
+  def show
+    render json: @product_sheet, status: :accepted
   end
 
   def update
