@@ -36,7 +36,7 @@ class Api::V1::ProductsController < ApplicationController
 
   def strong_params
 
-    params.require(:product).permit(:name, :tags, :url, :product_sheet_id)
+    params.require(:product).permit(:name, :tags, :url, :price, :product_sheet_id)
   end
 
   def find_product
