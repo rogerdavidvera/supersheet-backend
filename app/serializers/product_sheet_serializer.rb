@@ -1,4 +1,4 @@
 class ProductSheetSerializer < ActiveModel::Serializer
   has_many :products
-  attributes :name
+  attributes :id, :name
 end
