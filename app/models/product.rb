@@ -24,12 +24,6 @@ class Product < ApplicationRecord
     # has worked out.
     self.update(name: name, tags: tags)
   end
-
-  comma do
-    name
-    tags
-    url
-  end
 end
 
 private
