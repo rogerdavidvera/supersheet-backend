@@ -12,6 +12,19 @@ class Api::V1::ProductSheetsController < ApplicationController
     send_data @product_sheet.to_csv, filename: "#{@product_sheet.name}.csv"
   end
 
+  def create
+
+    @product_sheet = ProductSheet.create(strong_params)
+
+    if @product_sheet.save
+      @product_sheet.finish_product
+      render json: @product_sheet, status: :accepted
+    else
+      render json: { errors: @product_sheet.errors.full_messages }, status: :unprocessible_entity
+    end
+
+  end
+
   def show
     render json: @product_sheet, status: :accepted
   end
