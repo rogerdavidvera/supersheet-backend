@@ -10,7 +10,7 @@ class Api::V1::ProductsController < ApplicationController
   end
 
   def create
-    byebug
+    
     @product = Product.create(strong_params)
 
     if @product.save
