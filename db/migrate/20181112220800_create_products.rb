@@ -4,6 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :tags
       t.string :url
+      t.string :price
       t.integer :product_sheet_id
 
       t.timestamps

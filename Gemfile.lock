@@ -220,7 +220,10 @@ DEPENDENCIES
   active_model_serializers
   bootsnap (>= 1.1.0)
   byebug
+<<<<<<< HEAD
   comma (~> 4.2.0)
+=======
+>>>>>>> 289a412de8130305b2a31071fc066d0e7b8b64d6
   google-cloud-vision
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
