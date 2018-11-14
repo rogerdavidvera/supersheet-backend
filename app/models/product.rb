@@ -24,6 +24,7 @@ class Product < ApplicationRecord
     # has worked out.
     self.update(name: name, tags: tags)
   end
+
 end
 
 private

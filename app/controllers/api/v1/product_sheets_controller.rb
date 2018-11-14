@@ -1,8 +1,15 @@
 class Api::V1::ProductSheetsController < ApplicationController
-  before_action :find_product_sheet, only: [:update, :show]
+  include ActionController::MimeResponds
+
+  before_action :find_product_sheet, only: [:update, :show, :download]
+
   def index
     @product_sheets = ProductSheet.all
     render json: @product_sheets
+  end
+
+  def download
+    send_data @product_sheet.to_csv, filename: "#{@product_sheet.name}.csv"
   end
 
   def show
@@ -24,7 +31,7 @@ class Api::V1::ProductSheetsController < ApplicationController
     params.permit(:name)
   end
 
-  def find_product
+  def find_product_sheet
     @product_sheet = ProductSheet.find(params[:id])
   end
 end
