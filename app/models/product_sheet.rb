@@ -1,3 +1,5 @@
+require 'csv'
+
 class ProductSheet < ApplicationRecord
   has_many :products
 
@@ -13,5 +15,5 @@ class ProductSheet < ApplicationRecord
       end
     end
   end
-  
+
 end
