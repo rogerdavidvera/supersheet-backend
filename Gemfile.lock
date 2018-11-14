@@ -56,14 +56,12 @@ GEM
     byebug (10.0.2)
     case_transform (0.2)
       activesupport
+    comma (4.2.0)
+      activesupport (>= 4.0.0, < 6)
     concurrent-ruby (1.1.3)
     crass (1.0.4)
     declarative (0.0.10)
     declarative-option (0.1.0)
-    dotenv (2.5.0)
-    dotenv-rails (2.5.0)
-      dotenv (= 2.5.0)
-      railties (>= 3.2, < 6.0)
     erubi (1.7.1)
     faraday (0.15.3)
       multipart-post (>= 1.2, < 3)
@@ -93,6 +91,7 @@ GEM
       googleauth (~> 0.6.2)
       grpc (>= 1.7.2, < 2.0)
       rly (~> 0.2.3)
+    google-protobuf (3.6.1)
     google-protobuf (3.6.1-universal-darwin)
     googleapis-common-protos (1.3.7)
       google-protobuf (~> 3.0)
@@ -107,6 +106,9 @@ GEM
       multi_json (~> 1.11)
       os (>= 0.9, < 2.0)
       signet (~> 0.7)
+    grpc (1.16.0)
+      google-protobuf (~> 3.1)
+      googleapis-common-protos-types (~> 1.0.0)
     grpc (1.16.0-universal-darwin)
       google-protobuf (~> 3.1)
       googleapis-common-protos-types (~> 1.0.0)
@@ -218,7 +220,7 @@ DEPENDENCIES
   active_model_serializers
   bootsnap (>= 1.1.0)
   byebug
-  dotenv-rails
+  comma (~> 4.2.0)
   google-cloud-vision
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
