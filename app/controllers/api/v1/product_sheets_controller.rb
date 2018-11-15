@@ -1,7 +1,7 @@
 class Api::V1::ProductSheetsController < ApplicationController
   include ActionController::MimeResponds
 
-  before_action :find_product_sheet, only: [:update, :show, :download]
+  before_action :find_product_sheet, only: [:update, :show, :download, :destroy]
 
   def index
     @product_sheets = ProductSheet.all
@@ -36,6 +36,11 @@ class Api::V1::ProductSheetsController < ApplicationController
     else
       render json: { errors: @product_sheet.errors.full_messages }, status: :unprocessible_entity
     end
+  end
+
+  def destroy
+    @product_sheet.destroy
+    render json: @product_sheet, status: :accepted
   end
 
   private
