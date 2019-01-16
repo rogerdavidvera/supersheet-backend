@@ -1,6 +1,5 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  ruby ENV['CUSTOM_RUBY_VERSION'] || '2.5.3'
   # Code is not reloaded between requests.
   config.cache_classes = true
 
