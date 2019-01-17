@@ -13,7 +13,8 @@ class Product < ApplicationRecord
   def finish_product
     vision = Google::Cloud::Vision.new({
       project: "mod3-final-project",
-      keyfile: "keyfile.json" # You're keyfile here, (ours in in root)
+      keyfile: Google::APIClient::ClientSecrets.new(JSON.parse(ENV['KEYFILE']))
+ # You're keyfile here, (ours in in root)
     })
 
     image = vision.image(self.url)
