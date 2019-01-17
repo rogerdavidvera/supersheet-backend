@@ -10,14 +10,14 @@ class Product < ApplicationRecord
   # And then update it's name and tag properties from 'nil'
   # to the values retrieved after image analysis.
 
-  keyJSON = Google::APIClient::ClientSecrets.new(JSON.parse(ENV['KEYFILE']))
-  print keyJSON
   def finish_product
     vision = Google::Cloud::Vision.new({
       project: "mod3-final-project",
-      keyfile: keyJSON
+      keyfile: Google::APIClient::ClientSecrets.new(JSON.parse(ENV['KEYFILE']))
  # You're keyfile here, (ours in in root)
     })
+
+    puts vision
 
     image = vision.image(self.url)
 
