@@ -1,5 +1,5 @@
 # Supersheet
-> Grabs images, scans them for their name and information related to them. Parses them to a CSV.
+> Grabs images, scans them for information related to them, parses them to a CSV.
 
 
 ## Features:
